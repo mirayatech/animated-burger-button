@@ -23,3 +23,186 @@ p {
   margin-bottom: auto;
   margin-bottom: 1rem;
 }
+
+.burger {
+  cursor: pointer;
+  background-color: transparent;
+  width: 3.6rem;
+  padding: 0 0.1rem;
+  border: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.burger:active > *,
+.burger:focus > *,
+.burger:hover > * {
+  margin-bottom: 0.4rem;
+}
+.burger:active .bun:first-child,
+.burger:focus .bun:first-child,
+.burger:hover .bun:first-child {
+  margin-bottom: 0;
+}
+
+.burger:active .lettuce,
+.burger:focus .lettuce,
+.burger:hover .lettuce {
+  margin-bottom: 0.3rem;
+}
+
+.burger:active .pickles,
+.burger:focus .pickles,
+.burger:hover .pickles {
+  height: 0.2rem;
+}
+
+.burger:active .cheese,
+.burger:focus .cheese,
+.burger:hover .cheese {
+  padding-bottom: 0.8rem;
+}
+
+.burger .bun,
+.burger .lettuce,
+.burger .tomato,
+.burger .pickles,
+.burger .cheese,
+.burger .patty {
+  display: block;
+  transition: margin 0.2s ease-out;
+}
+.burger .bun {
+  background-color: #eba300;
+}
+.burger .bun:first-child {
+  height: 1.6rem;
+  border-radius: 2rem 2rem 0 0;
+  position: relative;
+}
+.burger .bun:first-child:before,
+.burger .bun:first-child:after {
+  display: block;
+  content: "";
+  background-image: radial-gradient(
+    #ffc83d 0%,
+    #ffc83d 10%,
+    transparent 20%,
+    transparent 100%
+  );
+  background-size: 1rem 1rem;
+  border-radius: 2rem 2rem 0 0;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  right: 0.2rem;
+  bottom: 0.2rem;
+}
+.burger .bun:first-child:after {
+  background-position: 0.5rem 0.5rem;
+}
+.burger .bun:last-child {
+  height: 0.6rem;
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+.burger .lettuce {
+  height: 0.4rem;
+  border-radius: 0.4rem;
+  margin: -0.2rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 99;
+}
+.burger .lettuce:before,
+.burger .lettuce:after {
+  display: block;
+  content: "";
+  height: 0.2rem;
+  width: 200%;
+  background-image: radial-gradient(
+    transparent 0%,
+    transparent 25%,
+    #13a10e 30%,
+    #13a10e 70%,
+    transparent 75%,
+    transparent 100%
+  );
+  background-size: 0.6rem 0.6rem;
+  position: absolute;
+  left: -100%;
+  right: 0;
+}
+.burger .lettuce:before {
+  background-position: left top;
+  top: 0;
+}
+.burger .lettuce:after {
+  background-position: left 0.3rem bottom;
+  bottom: 0;
+}
+.burger .tomato {
+  background-color: var(--tomato);
+  height: 0.4rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+.burger .pickles {
+  display: flex;
+  justify-content: center;
+  height: 0;
+}
+.burger .pickles:before,
+.burger .pickles:after {
+  display: block;
+  content: "";
+  background-color: var(--pickles);
+  width: 1.2rem;
+  height: 0.3rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+.burger .cheese {
+  overflow: hidden;
+  padding-bottom: 0.5rem;
+  border-radius: 0.2rem 0.2rem 0 0;
+  margin-bottom: -0.5rem;
+}
+.burger .cheese span {
+  display: block;
+  background-color: var(--cheese);
+  height: 0.3rem;
+  position: relative;
+}
+.burger .cheese span:before,
+.burger .cheese span:after {
+  display: block;
+  content: "";
+  transition: all 0.2s ease;
+}
+.burger .cheese span:before {
+  border-top: 0.4rem solid var(--cheese);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 33.3333333333%;
+  z-index: 99;
+  transform: translateX(-50%);
+}
+.burger .cheese span:after {
+  border-top: 0.4rem solid var(--darker-cheese);
+  border-left: 0.4rem solid transparent;
+  border-right: 0.4rem solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 66.6666666667%;
+  transform: translateX(-50%);
+}
+.burger .patty {
+  background-color: var(--patty);
+  height: 0.6rem;
+  margin-left: -0.2rem;
+  margin-right: -0.2rem;
+  border-radius: 0.6rem;
+  position: relative;
+  z-index: 9;
+}
