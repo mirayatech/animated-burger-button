@@ -43,25 +43,73 @@ p {
 .burger:hover .bun:first-child {
   margin-bottom: 0;
 }
-
+.burger:active .bun:first-child:before,
+.burger:focus .bun:first-child:before,
+.burger:hover .bun:first-child:before {
+  animation: rotate-bun-1 1s infinite linear;
+}
+.burger:active .bun:first-child:after,
+.burger:focus .bun:first-child:after,
+.burger:hover .bun:first-child:after {
+  animation: rotate-bun-2 1s infinite linear;
+}
 .burger:active .lettuce,
 .burger:focus .lettuce,
 .burger:hover .lettuce {
   margin-bottom: 0.3rem;
 }
 
+.burger:active .lettuce:before,
+.burger:focus .lettuce:before,
+.burger:hover .lettuce:before,
+.burger:active .lettuce:after,
+.burger:focus .lettuce:after,
+.burger:hover .lettuce:after {
+  animation: rotate-lettuce 3s infinite linear;
+}
+.burger:active .tomato,
+.burger:focus .tomato,
+.burger:hover .tomato {
+  animation: wiggle 1s infinite linear alternate-reverse;
+}
 .burger:active .pickles,
 .burger:focus .pickles,
 .burger:hover .pickles {
   height: 0.2rem;
 }
-
+.burger:active .pickles:before,
+.burger:focus .pickles:before,
+.burger:hover .pickles:before {
+  animation: switch-pickles-1 2s infinite linear alternate;
+}
+.burger:active .pickles:after,
+.burger:focus .pickles:after,
+.burger:hover .pickles:after {
+  animation: switch-pickles-2 2s infinite linear alternate;
+}
 .burger:active .cheese,
 .burger:focus .cheese,
 .burger:hover .cheese {
   padding-bottom: 0.8rem;
 }
-
+.burger:active .cheese span:before,
+.burger:focus .cheese span:before,
+.burger:hover .cheese span:before {
+  border-top-width: 0.8rem;
+  border-left-width: 0.8rem;
+  border-right-width: 0.8rem;
+  animation: rotate-cheese-1 2s infinite linear;
+}
+.burger:active .cheese span:after,
+.burger:focus .cheese span:after,
+.burger:hover .cheese span:after {
+  animation: rotate-cheese-2 2s infinite linear;
+}
+.burger:active .patty,
+.burger:focus .patty,
+.burger:hover .patty {
+  animation: wiggle 1s infinite linear alternate;
+}
 .burger .bun,
 .burger .lettuce,
 .burger .tomato,
@@ -205,4 +253,90 @@ p {
   border-radius: 0.6rem;
   position: relative;
   z-index: 9;
+}
+
+@keyframes rotate-bun-1 {
+  0% {
+    background-position-x: 0rem;
+  }
+  50% {
+    background-position-x: 0.5rem;
+  }
+  100% {
+    background-position-x: 1rem;
+  }
+}
+@keyframes rotate-bun-2 {
+  0% {
+    background-position-x: 0.5rem;
+  }
+  50% {
+    background-position-x: 1rem;
+  }
+  100% {
+    background-position-x: 1.5rem;
+  }
+}
+@keyframes rotate-lettuce {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes switch-pickles-1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%) translateX(0.4rem);
+  }
+}
+@keyframes switch-pickles-2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%) translateX(-0.4rem);
+  }
+}
+@keyframes rotate-cheese-1 {
+  0% {
+    left: 33.3333333333%;
+    transform: translateX(-50%);
+  }
+  33.333% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  33.334% {
+    left: 100%;
+    transform: translateX(100%);
+  }
+}
+@keyframes rotate-cheese-2 {
+  0% {
+    left: 66.6666666667%;
+    transform: translateX(-50%);
+  }
+  33.333% {
+    left: 100%;
+    transform: translateX(0);
+  }
+  33.334% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
 }
