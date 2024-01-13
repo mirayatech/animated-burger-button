@@ -1,0 +1,25 @@
+:root {
+  --tomato: #f03a17;
+  --pickles: #13a10e;
+  --bun: #eba300;
+  --lettuce: #13a10e;
+  --cheese: #ffc83d;
+  --darker-cheese: #ffba0a;
+  --patty: #8e562e;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+p {
+  margin-bottom: auto;
+  margin-bottom: 1rem;
+}
