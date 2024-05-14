@@ -1,19 +1,48 @@
 # 🍔 Animated Burger Button
 
-I created this fun animated burger button because I was craving a burger once and thought, "Why not make a virtual one?" Now I can enjoy a virtual burger without getting hungry! 😋
+![Animated Burger](./hamburger.gif)
 
-## 💻 Tech Stack
+This project features an animated burger button, showcasing CSS animations and hover effects.
 
-- `HTML`
-- `CSS`
+## 📦 Technologies
 
-## 💡 How It Works
+Built with:
 
-When you hover your mouse over the burger icon or click on it, the burger's parts, like the bun, lettuce, and tomato, get separated and move around.
+- `HTML:` Markup language for creating the structure.
+- `CSS:` For styling and animations.
 
-## 🦄 The Power of CSS
+## ⚙️ Getting Started
 
-This project proves that CSS is more powerful than we might think. It's not just for styling web pages. It can bring interactivity and life to our designs. So, never underestimate the magic of CSS. ✨
+To view and interact with the animated burger button:
 
- ## 🎬 Preview
- <img src="https://github.com/mirayatech/animated-burger-button/assets/71933266/d4f3bb64-ff83-4e1a-89ce-dbf489233726)" width="100%"/>
+1. Download the project files.
+2. Open the `index.html` file in Visual Studio Code.
+3. Use the Live Server extension in VS Code to view the project in your web browser.
+
+## 🖱️ Interaction
+
+Hover over and click the burger button to see the animations in action.
+
+## 🛣️ Project Structure
+
+Here are the key files and their purposes:
+
+- **index.html**: The main HTML file containing the structure of the burger button.
+- **style.css**: The CSS file that styles the burger button and adds animations.
+
+Feel free to explore and customize these files to suit your needs!
+
+## 📱 Responsive Design
+
+- The animated burger button is responsive, ensuring a seamless experience on both desktops and mobile devices.
+
+## 🔄 Animations
+
+The burger button features various CSS animations that activate on hover and click events. Here’s an overview:
+
+- **Bun**: Animates with a rotation effect.
+- **Lettuce**: Animates with a sliding effect.
+- **Tomato**: Wriggles slightly.
+- **Pickles**: Switch positions.
+- **Cheese**: Rotates dynamically.
+- **Patty**: Wriggles slightly.
